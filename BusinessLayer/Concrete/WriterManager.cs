@@ -43,5 +43,10 @@ namespace BusinessLayer.Concrete
         {
             return _writerDal.List().OrderByDescending(x => x.WriterID).ToList();
         }
+
+        public Writer Login(Writer writer)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

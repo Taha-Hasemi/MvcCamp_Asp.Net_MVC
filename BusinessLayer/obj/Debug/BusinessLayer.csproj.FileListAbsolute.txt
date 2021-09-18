@@ -18,3 +18,8 @@ C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\obj\Debug\BusinessLaye
 C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.pdb
 C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\FluentValidation.dll
 C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\FluentValidation.xml
+C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\Antlr3.Runtime.dll
+C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\WebGrease.dll
+C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\RTC9911\source\repos\MVCProjeKampi\BusinessLayer\bin\Debug\Newtonsoft.Json.xml

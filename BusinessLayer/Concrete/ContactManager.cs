@@ -41,7 +41,7 @@ namespace BusinessLayer.Concrete
 
         public List<Contact> List()
         {
-            return _contactDal.List();
+            return _contactDal.List(x => x.MessageState);
         }
     }
 }

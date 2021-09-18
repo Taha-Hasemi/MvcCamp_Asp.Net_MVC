@@ -23,6 +23,8 @@ namespace MVCProjeKampi.Controllers
         public ActionResult GetContactDetails(int id)
         {
             var contactValues = contactManager.GetByID(id);
+            contactValues.MessageRead = true;
+            contactManager.ContactUpdate(contactValues);
             return View(contactValues);
         }
         public PartialViewResult LeftMenuPartial()
@@ -35,6 +37,10 @@ namespace MVCProjeKampi.Controllers
 
             var sendboxCount = messageManager.ListSendbox(6).Where(x => !x.MessageRead).Count();
             ViewBag.sendboxCount = sendboxCount;
+            return PartialView();
+        }
+        public PartialViewResult NewMessageIcon()
+        {
             return PartialView();
         }
     }

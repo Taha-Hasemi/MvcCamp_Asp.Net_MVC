@@ -52,24 +52,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IOtherValuesDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IRoleDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
-    <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfOtherValuesDal.cs" />
+    <Compile Include="EntityFramework\EfRoleDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202108300937588_mig1.cs" />
     <Compile Include="Migrations\202108300937588_mig1.designer.cs">
@@ -183,6 +188,58 @@
     <Compile Include="Migrations\202109141015500_FileName_in_Message_Table.designer.cs">
       <DependentUpon>202109141015500_FileName_in_Message_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109160717438_Add_UploadFiles_Table.cs" />
+    <Compile Include="Migrations\202109160717438_Add_UploadFiles_Table.designer.cs">
+      <DependentUpon>202109160717438_Add_UploadFiles_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109160752282_Delete_UploadFiles_table.cs" />
+    <Compile Include="Migrations\202109160752282_Delete_UploadFiles_table.designer.cs">
+      <DependentUpon>202109160752282_Delete_UploadFiles_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109160753374_Delete_UploadFiles_table2.cs" />
+    <Compile Include="Migrations\202109160753374_Delete_UploadFiles_table2.designer.cs">
+      <DependentUpon>202109160753374_Delete_UploadFiles_table2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109160758237_Add_ImageFile_Table.cs" />
+    <Compile Include="Migrations\202109160758237_Add_ImageFile_Table.designer.cs">
+      <DependentUpon>202109160758237_Add_ImageFile_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109160926404_Add_Admin_Table.cs" />
+    <Compile Include="Migrations\202109160926404_Add_Admin_Table.designer.cs">
+      <DependentUpon>202109160926404_Add_Admin_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109170759241_Add_Role_Table.cs" />
+    <Compile Include="Migrations\202109170759241_Add_Role_Table.designer.cs">
+      <DependentUpon>202109170759241_Add_Role_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109170802400_Add_Role_Table_Repare.cs" />
+    <Compile Include="Migrations\202109170802400_Add_Role_Table_Repare.designer.cs">
+      <DependentUpon>202109170802400_Add_Role_Table_Repare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109170827438_Add_RoleColor_In_Role_Table.cs" />
+    <Compile Include="Migrations\202109170827438_Add_RoleColor_In_Role_Table.designer.cs">
+      <DependentUpon>202109170827438_Add_RoleColor_In_Role_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109180649521_Rename_Role_to_UserRole.cs" />
+    <Compile Include="Migrations\202109180649521_Rename_Role_to_UserRole.designer.cs">
+      <DependentUpon>202109180649521_Rename_Role_to_UserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109180800046_Repare_Admin_UserRole.cs" />
+    <Compile Include="Migrations\202109180800046_Repare_Admin_UserRole.designer.cs">
+      <DependentUpon>202109180800046_Repare_Admin_UserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181107598_Add_MessageStatus_in_Message_and_Contact_table.cs" />
+    <Compile Include="Migrations\202109181107598_Add_MessageStatus_in_Message_and_Contact_table.designer.cs">
+      <DependentUpon>202109181107598_Add_MessageStatus_in_Message_and_Contact_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181129011_Add_AboutState_and_Repare_Message_and_Contact_table.cs" />
+    <Compile Include="Migrations\202109181129011_Add_AboutState_and_Repare_Message_and_Contact_table.designer.cs">
+      <DependentUpon>202109181129011_Add_AboutState_and_Repare_Message_and_Contact_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181409427_Delete_AdminRole_Column_in_Admin_table.cs" />
+    <Compile Include="Migrations\202109181409427_Delete_AdminRole_Column_in_Admin_table.designer.cs">
+      <DependentUpon>202109181409427_Delete_AdminRole_Column_in_Admin_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -280,6 +337,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109141015500_FileName_in_Message_Table.resx">
       <DependentUpon>202109141015500_FileName_in_Message_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109160717438_Add_UploadFiles_Table.resx">
+      <DependentUpon>202109160717438_Add_UploadFiles_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109160752282_Delete_UploadFiles_table.resx">
+      <DependentUpon>202109160752282_Delete_UploadFiles_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109160753374_Delete_UploadFiles_table2.resx">
+      <DependentUpon>202109160753374_Delete_UploadFiles_table2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109160758237_Add_ImageFile_Table.resx">
+      <DependentUpon>202109160758237_Add_ImageFile_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109160926404_Add_Admin_Table.resx">
+      <DependentUpon>202109160926404_Add_Admin_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109170759241_Add_Role_Table.resx">
+      <DependentUpon>202109170759241_Add_Role_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109170802400_Add_Role_Table_Repare.resx">
+      <DependentUpon>202109170802400_Add_Role_Table_Repare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109170827438_Add_RoleColor_In_Role_Table.resx">
+      <DependentUpon>202109170827438_Add_RoleColor_In_Role_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109180649521_Rename_Role_to_UserRole.resx">
+      <DependentUpon>202109180649521_Rename_Role_to_UserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109180800046_Repare_Admin_UserRole.resx">
+      <DependentUpon>202109180800046_Repare_Admin_UserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181107598_Add_MessageStatus_in_Message_and_Contact_table.resx">
+      <DependentUpon>202109181107598_Add_MessageStatus_in_Message_and_Contact_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181129011_Add_AboutState_and_Repare_Message_and_Contact_table.resx">
+      <DependentUpon>202109181129011_Add_AboutState_and_Repare_Message_and_Contact_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181409427_Delete_AdminRole_Column_in_Admin_table.resx">
+      <DependentUpon>202109181409427_Delete_AdminRole_Column_in_Admin_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -47,6 +47,8 @@ namespace MVCProjeKampi.Controllers
         {
             ViewBag.MessageType = type;
             var messageValues = messageManager.GetByID(id);
+            messageValues.MessageRead = true;
+            messageManager.MessageUpdate(messageValues);
             return View(messageValues);
         }
 
@@ -60,23 +62,24 @@ namespace MVCProjeKampi.Controllers
         {
             string fileName = OtherValuesManager.GetFileName();
 
-            
-                for (int i = 0; i < Request.Files.Count; i++)
-                {
-                    if (Request.Files[i].FileName != "")
-                    {
-                        string[] uzanti = Request.Files[i].FileName.ToString().Split('.');
 
-                        Request.Files[i].SaveAs(Server.MapPath("~/Files/" + fileName + "." + uzanti[1]));
-                        message.FileName = "/Files/" + fileName + "." + uzanti[1];
-                    }
+            for (int i = 0; i < Request.Files.Count; i++)
+            {
+                if (Request.Files[i].FileName != "")
+                {
+                    string[] uzanti = Request.Files[i].FileName.ToString().Split('.');
+
+                    Request.Files[i].SaveAs(Server.MapPath("~/Files/" + fileName + "." + uzanti[1]));
+                    message.FileName = "/Files/" + fileName + "." + uzanti[1];
                 }
-             
+            }
+
 
             ValidationResult result = validationRules.Validate(message);
             if (result.IsValid)
             {
                 message.MessageDate = DateTime.Now;
+                message.MessageState = true;
                 //////SEŞŞINDAN SONRA DÜZELTİLSİN/////////
                 message.WriterID = 2;
                 messageManager.MessageAdd(message);

@@ -7,9 +7,14 @@
 @using (Html.BeginForm("UpdateHeading", "Heading", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.Label("Başlık ID");
+        @Html.Label("Başlık ID")
+        @Html.TextBoxFor(x => x.HeadingID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Başlık Adı")
         @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
         <br />
         @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.CategoryValue, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Güncelle</button>
     </div>
 }

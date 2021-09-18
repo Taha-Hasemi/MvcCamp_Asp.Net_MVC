@@ -42,3 +42,16 @@ C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccess
 C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_File_In_Message_Table.resources
 C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_OtherValues_Table.resources
 C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.FileName_in_Message_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_UploadFiles_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Delete_UploadFiles_table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Delete_UploadFiles_table2.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_ImageFile_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_Admin_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_Role_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_Role_Table_Repare.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_RoleColor_In_Role_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Rename_Role_to_UserRole.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Repare_Admin_UserRole.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_MessageStatus_in_Message_and_Contact_table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_AboutState_and_Repare_Message_and_Contact_table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Delete_AdminRole_Column_in_Admin_table.resources

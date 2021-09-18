@@ -9,15 +9,15 @@
 @using (Html.BeginForm("UpdateCategory", "AdminCategory", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.Label("Kategori Adı");
+        @Html.Label("Kategori ID")
         @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryID, "", new { @style = "color:red" })
         <br /><br />
-        @Html.Label("Kategori Adı");
+        @Html.Label("Kategori Adı")
         @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryName, "", new { @style = "color:red" })
         <br /><br />
-        @Html.Label("Kategori Açıklama");
+        @Html.Label("Kategori Açıklama")
         @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryDescription, "", new { @style = "color:red" })
         <br /><br />

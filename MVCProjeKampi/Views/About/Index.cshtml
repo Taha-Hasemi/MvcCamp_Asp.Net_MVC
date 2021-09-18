@@ -10,16 +10,24 @@
     <tr>
         <th>ID</th>
         <th>Hakkımda Başlığı</th>
-        <th>Aktif yap</th>
-        <th>Pasif yap</th>
+        <th>Aktif-Pasif yap</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.AboutID</td>
             <td>Baslik</td>
-            <td><a href="#" class="btn btn-success">Aktif Yap</a></td>
-            <td><a href="#" class="btn btn-danger">Pasif Yap</a></td>
+            <td>
+                @if (item.AboutState)
+                {
+                    <a href="/About/Passive/@item.AboutID" class="btn btn-danger">Pasif Yap</a>
+
+                }
+                else
+                {
+                    <a href="/About/Active/@item.AboutID" class="btn btn-success">Aktif Yap</a>
+                }
+            </td>
         </tr>
     }
 </table>

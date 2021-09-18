@@ -9,7 +9,7 @@
 <!-- /.mailbox-read-info -->
 <!-- /.mailbox-controls -->
 <div class="mailbox-read-message">
-    <p>@Model.MessageContent</p>
+    <p>@Html.Raw(@Model.MessageContent)</p>
     <img src="@Model.FileName" alt="Dosya" height="100" />
 </div>
 <!-- /.mailbox-read-message -->

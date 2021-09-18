@@ -20,7 +20,8 @@ namespace BusinessLayer.Concrete
 
         public void DeleteMessage(Message message)
         {
-            throw new NotImplementedException();
+            message.MessageState = false;
+            _messageDal.Update(message);
         }
 
         public Message GetByID(int id)
@@ -30,12 +31,12 @@ namespace BusinessLayer.Concrete
 
         public List<Message> ListInbox(string mail)
         {
-            return _messageDal.List(x => x.RecieverMail == mail);
+            return _messageDal.List(x => x.RecieverMail == mail && x.MessageState);
         }
 
         public List<Message> ListSendbox(int id)
         {
-            return _messageDal.List(x => x.WriterID == id);
+            return _messageDal.List(x => x.WriterID == id && x.MessageState);
         }
 
         public void MessageAdd(Message message)
@@ -45,7 +46,7 @@ namespace BusinessLayer.Concrete
 
         public void MessageUpdate(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Update(message);
         }
     }
 }

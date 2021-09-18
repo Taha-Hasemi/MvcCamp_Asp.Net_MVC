@@ -23,5 +23,7 @@ namespace EntityLayer.Concrete
 
         [StringLength(1000)]
         public string AboutImage2 { get; set; }
+
+        public bool AboutState { get; set; }
     }
 }
