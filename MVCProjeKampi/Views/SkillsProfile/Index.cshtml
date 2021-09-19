@@ -24,20 +24,20 @@
     <!--ResponsiveTabs-->
     <script src="~/SkillsProfileWidget/js/easyResponsiveTabs.js" type="text/javascript"></script>
     <script type="text/javascript">
-	$(document).ready(function () {
-		$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion
-			width: 'auto', //auto or any width like 600px
-			fit: true   // 100% fit in a container
-		});
-	});
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
     </script>
     <!--//ResponsiveTabs-->
 </head>
 <body>
     <!-- main -->
     <div class="main">
-        <h1>Skills Profile Widget</h1>
+        <h1>Yetenek Kartım</h1>
         <div class="main-info w3l">
             <div class="main-row">
                 <!-- main-row-one -->
@@ -54,6 +54,12 @@
                     <div class='bar_group__bar thin' label='SQL &nbsp;&nbsp; @Model.SQL%' value='@Model.SQL'></div>
                     <div class='bar_group__bar thin' label='ASP.NET &nbsp;&nbsp; @Model.AspDotNet%' value='@Model.AspDotNet'></div>
                     <div class='bar_group__bar thin' label='.NET &nbsp;&nbsp; @Model.DotNet%' value='@Model.DotNet'></div>
+                    <div class='bar_group__bar thin' label='Algorithm &nbsp;&nbsp; @Model.Algorithm%' value='@Model.Algorithm'></div>
+                    <div class='bar_group__bar thin' label='PhotoShop &nbsp;&nbsp; @Model.PhotoShop%' value='@Model.PhotoShop'></div>
+                    <div class='bar_group__bar thin' label='Windows Form &nbsp;&nbsp; @Model.WindowsForm%' value='@Model.WindowsForm'></div>
+                    <div class='bar_group__bar thin' label='Console Form &nbsp;&nbsp; @Model.ConsoleForm%' value='@Model.ConsoleForm'></div>
+                    <div class='bar_group__bar thin' label='Entity Framework &nbsp;&nbsp; @Model.EntityFramework%' value='@Model.EntityFramework'></div>
+                    <div class='bar_group__bar thin' label='Pubg M24 &nbsp;&nbsp; @Model.PubgM24%' value='@Model.PubgM24'></div>
                 </div>
                 <!--bar-js-->
                 <script src="~/SkillsProfileWidget/js/bars.js"></script>

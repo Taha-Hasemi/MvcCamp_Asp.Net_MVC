@@ -23,5 +23,15 @@ namespace EntityLayer.Concrete
         public int AspDotNet { get; set; }
 
         public int Algorithm { get; set; }
+        
+        public int PhotoShop { get; set; }
+        
+        public int WindowsForm { get; set; }
+        
+        public int ConsoleForm { get; set; }
+        
+        public int EntityFramework { get; set; }
+        
+        public int PubgM24 { get; set; }
     }
 }

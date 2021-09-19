@@ -57,3 +57,4 @@ C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccess
 C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Delete_AdminRole_Column_in_Admin_table.resources
 C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_Skill_Table.resources
 C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Repare_Skill_Table.resources
+C:\Users\RTC9911\source\repos\MVCProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.add_Skill_Columns.resources

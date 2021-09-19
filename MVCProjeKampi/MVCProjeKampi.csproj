@@ -2268,6 +2268,11 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
+    <Content Include="SS\Ekran Görüntüsü %28111%29.png" />
+    <Content Include="SS\Ekran Görüntüsü %28112%29.png" />
+    <Content Include="SS\Ekran Görüntüsü %28113%29.png" />
+    <Content Include="SS\ProfileImage\photo_2021-07-29_17-03-43.jpg" />
+    <Content Include="SS\ProfileImage\Resim.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2324,7 +2329,6 @@
     <Folder Include="Images\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
-    <Folder Include="SS\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

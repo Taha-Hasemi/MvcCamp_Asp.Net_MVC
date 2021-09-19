@@ -250,6 +250,10 @@
     <Compile Include="Migrations\202109190907189_Repare_Skill_Table.designer.cs">
       <DependentUpon>202109190907189_Repare_Skill_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109191005598_add_Skill_Columns.cs" />
+    <Compile Include="Migrations\202109191005598_add_Skill_Columns.designer.cs">
+      <DependentUpon>202109191005598_add_Skill_Columns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -392,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109190907189_Repare_Skill_Table.resx">
       <DependentUpon>202109190907189_Repare_Skill_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109191005598_add_Skill_Columns.resx">
+      <DependentUpon>202109191005598_add_Skill_Columns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
