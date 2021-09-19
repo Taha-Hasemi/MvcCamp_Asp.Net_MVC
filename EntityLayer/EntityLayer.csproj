@@ -61,6 +61,7 @@
     <Compile Include="Concrete\ImageFile.cs" />
     <Compile Include="Concrete\Message.cs" />
     <Compile Include="Concrete\OtherValues.cs" />
+    <Compile Include="Concrete\Skill.cs" />
     <Compile Include="Concrete\UserRole.cs" />
     <Compile Include="Concrete\Writer.cs" />
     <Compile Include="Concrete\WriterMessage.cs" />

@@ -62,6 +62,7 @@
     <Compile Include="Abstract\IOtherValuesDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IRoleDal.cs" />
+    <Compile Include="Abstract\ISkillDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfOtherValuesDal.cs" />
     <Compile Include="EntityFramework\EfRoleDal.cs" />
+    <Compile Include="EntityFramework\EfSkillDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202108300937588_mig1.cs" />
     <Compile Include="Migrations\202108300937588_mig1.designer.cs">
@@ -240,6 +242,14 @@
     <Compile Include="Migrations\202109181409427_Delete_AdminRole_Column_in_Admin_table.designer.cs">
       <DependentUpon>202109181409427_Delete_AdminRole_Column_in_Admin_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109190832533_Add_Skill_Table.cs" />
+    <Compile Include="Migrations\202109190832533_Add_Skill_Table.designer.cs">
+      <DependentUpon>202109190832533_Add_Skill_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109190907189_Repare_Skill_Table.cs" />
+    <Compile Include="Migrations\202109190907189_Repare_Skill_Table.designer.cs">
+      <DependentUpon>202109190907189_Repare_Skill_Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -376,6 +386,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109181409427_Delete_AdminRole_Column_in_Admin_table.resx">
       <DependentUpon>202109181409427_Delete_AdminRole_Column_in_Admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109190832533_Add_Skill_Table.resx">
+      <DependentUpon>202109190832533_Add_Skill_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109190907189_Repare_Skill_Table.resx">
+      <DependentUpon>202109190907189_Repare_Skill_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -144,6 +144,7 @@
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\SkillsProfileController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2306,6 +2307,16 @@
     <Content Include="Views\Message\InboxPartial.cshtml" />
     <Content Include="Views\Message\SendboxPartial.cshtml" />
     <Content Include="Views\Message\GetMessageDetails.cshtml" />
+    <Content Include="SkillsProfileWidget\css\style.css" />
+    <Content Include="SkillsProfileWidget\images\5.jpg" />
+    <Content Include="SkillsProfileWidget\images\img1.jpg" />
+    <Content Include="SkillsProfileWidget\images\sprite.png" />
+    <Content Include="SkillsProfileWidget\index.html" />
+    <Content Include="SkillsProfileWidget\js\bars.js" />
+    <Content Include="SkillsProfileWidget\js\easyResponsiveTabs.js" />
+    <Content Include="SkillsProfileWidget\js\jquery-1.11.1.min.js" />
+    <Content Include="SkillsProfileWidget\js\jquery.circlechart.js" />
+    <Content Include="SkillsProfileWidget\w3layouts-License.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2313,6 +2324,7 @@
     <Folder Include="Images\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
+    <Folder Include="SS\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2428,6 +2440,7 @@
     <Content Include="Views\Istatistik\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Contact\NewMessageIcon.cshtml" />
+    <Content Include="Views\SkillsProfile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
