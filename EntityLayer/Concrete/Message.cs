@@ -30,6 +30,6 @@ namespace EntityLayer.Concrete
         [StringLength(2000)]
         public string FileName { get; set; }
 
-        public bool MessageState { get; set; }
+        public bool MessageStatus { get; set; }
     }
 }

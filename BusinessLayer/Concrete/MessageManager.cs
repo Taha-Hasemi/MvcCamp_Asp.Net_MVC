@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public void DeleteMessage(Message message)
         {
-            message.MessageState = false;
+            message.MessageStatus = false;
             _messageDal.Update(message);
         }
 
@@ -31,12 +31,12 @@ namespace BusinessLayer.Concrete
 
         public List<Message> ListInbox(string mail)
         {
-            return _messageDal.List(x => x.RecieverMail == mail && x.MessageState);
+            return _messageDal.List(x => x.RecieverMail == mail && x.MessageStatus);
         }
 
         public List<Message> ListSendbox(int id)
         {
-            return _messageDal.List(x => x.WriterID == id && x.MessageState);
+            return _messageDal.List(x => x.WriterID == id && x.MessageStatus);
         }
 
         public void MessageAdd(Message message)

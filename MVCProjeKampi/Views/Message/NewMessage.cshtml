@@ -39,10 +39,10 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                @Html.Action("LeftMenuPartial", "Contact")
+                @Html.Action("LeftMenuPartial", "WriterMessage")
                 <!-- /.col -->
                 <div class="col-md-9">
-                    @using (Html.BeginForm("NewMessage", "Message", FormMethod.Post, new { enctype = "Multipart/form-data" }))
+                    @using (Html.BeginForm("NewMessage", "WriterMessage", FormMethod.Post, new { enctype = "Multipart/form-data" }))
                     {
                         <div class="card card-primary card-outline">
                             <div class="card-header">

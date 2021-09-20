@@ -132,20 +132,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AdminPanel\AboutController.cs" />
+    <Compile Include="Controllers\AdminPanel\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\ContentController.cs" />
-    <Compile Include="Controllers\ErrorPageController.cs" />
-    <Compile Include="Controllers\GalleryController.cs" />
-    <Compile Include="Controllers\HeadingController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IstatistikController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\AdminPanel\ContactController.cs" />
+    <Compile Include="Controllers\AdminPanel\ContentController.cs" />
+    <Compile Include="Controllers\AdminPanel\ErrorPageController.cs" />
+    <Compile Include="Controllers\AdminPanel\GalleryController.cs" />
+    <Compile Include="Controllers\AdminPanel\HeadingController.cs" />
+    <Compile Include="Controllers\AdminPanel\HomeController.cs" />
+    <Compile Include="Controllers\AdminPanel\IstatistikController.cs" />
+    <Compile Include="Controllers\AdminPanel\LoginController.cs" />
+    <Compile Include="Controllers\AdminPanel\MessageController.cs" />
     <Compile Include="Controllers\SkillsProfileController.cs" />
-    <Compile Include="Controllers\WriterController.cs" />
+    <Compile Include="Controllers\AdminPanel\WriterController.cs" />
+    <Compile Include="Controllers\WriterPanel\WriterContentController.cs" />
+    <Compile Include="Controllers\WriterPanel\WriterHeadingController.cs" />
+    <Compile Include="Controllers\WriterPanel\WriterMessageController.cs" />
+    <Compile Include="Controllers\WriterPanel\WriterProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2268,9 +2272,10 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
-    <Content Include="SS\Ekran Görüntüsü %28111%29.png" />
-    <Content Include="SS\Ekran Görüntüsü %28112%29.png" />
-    <Content Include="SS\Ekran Görüntüsü %28113%29.png" />
+    <Content Include="SS\Ekran Görüntüsü %28114%29.png" />
+    <Content Include="SS\Ekran Görüntüsü %28115%29.png" />
+    <Content Include="SS\Ekran Görüntüsü %28116%29.png" />
+    <Content Include="SS\Ekran Görüntüsü %28117%29.png" />
     <Content Include="SS\ProfileImage\photo_2021-07-29_17-03-43.jpg" />
     <Content Include="SS\ProfileImage\Resim.jpg" />
     <Content Include="Web.config" />
@@ -2445,6 +2450,19 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Contact\NewMessageIcon.cshtml" />
     <Content Include="Views\SkillsProfile\Index.cshtml" />
+    <Content Include="Views\Shared\_WriterLayout.cshtml" />
+    <Content Include="Views\WriterProfile\Index.cshtml" />
+    <Content Include="Views\WriterHeading\Index.cshtml" />
+    <Content Include="Views\WriterHeading\AddHeading.cshtml" />
+    <Content Include="Views\WriterHeading\UpdateHeading.cshtml" />
+    <Content Include="Views\WriterMessage\Inbox.cshtml" />
+    <Content Include="Views\WriterMessage\Sendbox.cshtml" />
+    <Content Include="Views\WriterMessage\InboxPartial.cshtml" />
+    <Content Include="Views\WriterMessage\SendboxPartial.cshtml" />
+    <Content Include="Views\WriterMessage\GetMessageDetails.cshtml" />
+    <Content Include="Views\WriterMessage\NewMessage.cshtml" />
+    <Content Include="Views\WriterMessage\LeftMenuPartial.cshtml" />
+    <Content Include="Views\WriterContent\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
