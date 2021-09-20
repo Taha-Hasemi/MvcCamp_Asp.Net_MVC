@@ -17,7 +17,8 @@ namespace MVCProjeKampi.Controllers.WriterPanel
 
         public ActionResult Index()
         {
-            var values = headingManager.List().Where(x => x.WriterID == 1).ToList();
+            int id = (int)Session["WriterID"];
+            var values = headingManager.List().Where(x => x.WriterID == id).ToList();
             return View(values);
         }
         [HttpGet]
@@ -37,7 +38,7 @@ namespace MVCProjeKampi.Controllers.WriterPanel
         {
             heading.HeadingDate = DateTime.Now;
             //Session işlemleri yapılsın
-            heading.WriterID = 1;
+            heading.WriterID = (int)Session["WriterID"];
             heading.HeadingStatus = true;
             headingManager.HeadingAdd(heading);
             return RedirectToAction("Index");
@@ -48,16 +49,25 @@ namespace MVCProjeKampi.Controllers.WriterPanel
         [HttpGet]
         public ActionResult UpdateHeading(int id)
         {
-            List<SelectListItem> categoryValue = (from x in categoryManager.List()
-                                                  select new SelectListItem
-                                                  {
-                                                      Text = x.CategoryName,
-                                                      Value = x.CategoryID.ToString()
-                                                  }).ToList();
+            int writerID = (int)Session["WriterID"];
+            var result = headingManager.Belong(writerID, id);
+            if (result != null)
+            {
+                List<SelectListItem> categoryValue = (from x in categoryManager.List()
+                                                      select new SelectListItem
+                                                      {
+                                                          Text = x.CategoryName,
+                                                          Value = x.CategoryID.ToString()
+                                                      }).ToList();
 
-            ViewBag.CategoryValue = categoryValue;
-            var headingValue = headingManager.GetByID(id);
-            return View(headingValue);
+                ViewBag.CategoryValue = categoryValue;
+                var headingValue = headingManager.GetByID(id);
+                return View(headingValue);
+            }
+            else
+            {
+                return RedirectToAction("Page404", "ErrorPage");
+            }
         }
         [HttpPost]
         public ActionResult UpdateHeading(Heading heading)
@@ -68,17 +78,26 @@ namespace MVCProjeKampi.Controllers.WriterPanel
 
         public ActionResult DeleteHeading(int id)
         {
-            var headingValue = headingManager.GetByID(id);
-            if (headingValue.HeadingStatus)
+            int writerID = (int)Session["WriterID"];
+            var result = headingManager.Belong(writerID, id);
+            if (result != null)
             {
-                headingValue.HeadingStatus = false;
+                var headingValue = headingManager.GetByID(id);
+                if (headingValue.HeadingStatus)
+                {
+                    headingValue.HeadingStatus = false;
+                }
+                else
+                {
+                    headingValue.HeadingStatus = true;
+                }
+                headingManager.DeleteHeading(headingValue);
+                return RedirectToAction("Index");
             }
             else
             {
-                headingValue.HeadingStatus = true;
+                return RedirectToAction("Page404", "ErrorPage");
             }
-            headingManager.DeleteHeading(headingValue);
-            return RedirectToAction("Index");
         }
     }
 }

@@ -10,10 +10,12 @@ using System.Web.Security;
 
 namespace MVCProjeKampi.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
         AdminManager adminManager = new AdminManager(new EfAdminDal());
+        WriterManager writerManager = new WriterManager(new EfWriterDal());
 
         [HttpGet]
         public ActionResult Index()
@@ -29,6 +31,28 @@ namespace MVCProjeKampi.Controllers
                 FormsAuthentication.SetAuthCookie(result.AdminUserName, false);
                 Session["AdminUserName"] = result.AdminUserName;
                 return RedirectToAction("Index", "AdminCategory");
+            }
+            else
+            {
+                ViewBag.Wrong = true;
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult WriterLogin(Writer writer)
+        {
+            var result = writerManager.Login(writer);
+            if (result != null)
+            {
+                FormsAuthentication.SetAuthCookie(result.WriterName + writer.WriterSurName, false);
+                Session["WriterMail"] = result.WriterMail;
+                Session["WriterID"] = result.WriterID;
+                return RedirectToAction("Index", "WriterProfile");
             }
             else
             {

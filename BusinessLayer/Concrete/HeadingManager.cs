@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _headingDal = headingDal;
         }
 
+        public Heading Belong(int writerID, int headingID)
+        {
+            return _headingDal.List(x => x.HeadingID == headingID && x.WriterID == writerID).FirstOrDefault();
+        }
+
         public void DeleteHeading(Heading heading)
         {
             _headingDal.Update(heading);

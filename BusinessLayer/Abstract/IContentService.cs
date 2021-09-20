@@ -16,5 +16,7 @@ namespace BusinessLayer.Abstract
         Content GetByID(int id);
         void DeleteContent(Content content);
         void ContentUpdate(Content content);
+        Content Belong(int writerID, int contentID);
+
     }
 }

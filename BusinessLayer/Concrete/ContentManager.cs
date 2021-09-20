@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _contentDal = contentDal;
         }
 
+        public Content Belong(int writerID, int contentID)
+        {
+            throw new NotImplementedException();
+        }
+
         public void ContentAdd(Content content)
         {
             throw new NotImplementedException();

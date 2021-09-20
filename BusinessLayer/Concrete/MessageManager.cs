@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _messageDal = messageDal;
         }
 
+        public Message Belong(int writerID, int messageID)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteMessage(Message message)
         {
             message.MessageStatus = false;

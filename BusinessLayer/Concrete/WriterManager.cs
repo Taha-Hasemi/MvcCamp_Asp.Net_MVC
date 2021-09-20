@@ -46,7 +46,14 @@ namespace BusinessLayer.Concrete
 
         public Writer Login(Writer writer)
         {
-            throw new NotImplementedException();
+            //Hashing
+            //byte[] veridizim = ASCIIEncoding.ASCII.GetBytes(writer.WriterPassword);
+            //writer.WriterPassword = Convert.ToBase64String(veridizim);
+
+            //byte[] veridizim2 = ASCIIEncoding.ASCII.GetBytes(writer.WriterMail);
+            //writer.WriterMail = Convert.ToBase64String(veridizim2);
+
+            return _writerDal.List().FirstOrDefault(x => x.WriterMail == writer.WriterMail && x.WriterPassword == writer.WriterPassword);
         }
     }
 }

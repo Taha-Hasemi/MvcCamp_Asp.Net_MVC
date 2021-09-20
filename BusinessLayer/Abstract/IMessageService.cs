@@ -15,5 +15,7 @@ namespace BusinessLayer.Abstract
         Message GetByID(int id);
         void DeleteMessage(Message message);
         void MessageUpdate(Message message);
+        Message Belong(int writerID, int messageID);
+
     }
 }

@@ -12,9 +12,9 @@ namespace MVCProjeKampi.Controllers.WriterPanel
     {
         // GET: WriterContent
         ContentManager contentManager = new ContentManager(new EfContentDal());
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
-            id = 1;
+            int id = (int)Session["WriterID"];
             var values = contentManager.ListByWriterID(id);
             return View(values);
         }
