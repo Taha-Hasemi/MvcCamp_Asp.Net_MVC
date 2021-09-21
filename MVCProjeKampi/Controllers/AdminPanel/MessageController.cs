@@ -27,7 +27,7 @@ namespace MVCProjeKampi.Controllers
         }
         public ActionResult Sendbox()
         {
-            var messageList = messageManager.ListSendbox(6);
+            var messageList = messageManager.ListSendbox("admin@gmail.com");
             return View(messageList);
         }
 
@@ -81,7 +81,7 @@ namespace MVCProjeKampi.Controllers
                 message.MessageDate = DateTime.Now;
                 message.MessageStatus = true;
                 //////SEŞŞINDAN SONRA DÜZELTİLSİN/////////
-                message.WriterID = 2;
+                message.SenderMail = "admin@gmail.com";
                 messageManager.MessageAdd(message);
                 return RedirectToAction("Sendbox");
             }

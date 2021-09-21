@@ -13,8 +13,7 @@ namespace EntityLayer.Concrete
         public int MessageID { get; set; }
 
         //[StringLength(50)]
-        public int WriterID { get; set; }
-        public virtual Writer Writer { get; set; }
+        public string SenderMail { get; set; }
 
 
         //[StringLength(50)]

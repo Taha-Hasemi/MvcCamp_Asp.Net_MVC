@@ -22,21 +22,25 @@ namespace MVCProjeKampi.Controllers.WriterPanel
 
         public ActionResult Inbox()
         {
-            var messageList = messageManager.ListInbox("admin@gmail.com");
+            string mail = (string)Session["WriterMail"];
+            var messageList = messageManager.ListInbox(mail);
             return View(messageList);
         }
         public ActionResult Sendbox()
         {
-            var messageList = messageManager.ListSendbox(6);
+            string mail = (string)Session["WriterMail"];
+            var messageList = messageManager.ListSendbox(mail);
             return View(messageList);
         }
 
         public PartialViewResult LeftMenuPartial()
         {
-            var inboxCount = messageManager.ListInbox("admin@gmail.com").Where(x => !x.MessageRead).Count();
+            string mail = (string)Session["WriterMail"];
+
+            var inboxCount = messageManager.ListInbox(mail).Where(x => !x.MessageRead).Count();
             ViewBag.inboxCount = inboxCount;
 
-            var sendboxCount = messageManager.ListSendbox(6).Where(x => !x.MessageRead).Count();
+            var sendboxCount = messageManager.ListSendbox(mail).Where(x => !x.MessageRead).Count();
             ViewBag.sendboxCount = sendboxCount;
             return PartialView();
         }
@@ -55,11 +59,19 @@ namespace MVCProjeKampi.Controllers.WriterPanel
 
         public ActionResult GetMessageDetails(int id, string type)
         {
-            ViewBag.MessageType = type;
-            var messageValues = messageManager.GetByID(id);
-            messageValues.MessageRead = true;
-            messageManager.MessageUpdate(messageValues);
-            return View(messageValues);
+            var result = messageManager.Belong(id, (string)Session["WriterMail"]);
+            if (result != null)
+            {
+                ViewBag.MessageType = type;
+                var messageValues = messageManager.GetByID(id);
+                messageValues.MessageRead = true;
+                messageManager.MessageUpdate(messageValues);
+                return View(messageValues);
+            }
+            else
+            {
+                return RedirectToAction("Page404", "ErrorPage");
+            }
         }
 
         [HttpGet]
@@ -88,10 +100,10 @@ namespace MVCProjeKampi.Controllers.WriterPanel
             ValidationResult result = validationRules.Validate(message);
             if (result.IsValid)
             {
+                string writerMail = (string)Session["WriterMail"];
                 message.MessageDate = DateTime.Now;
                 message.MessageStatus = true;
-                //////SEŞŞINDAN SONRA DÜZELTİLSİN/////////
-                message.WriterID = 2;
+                message.SenderMail = writerMail;
                 messageManager.MessageAdd(message);
                 return RedirectToAction("Sendbox");
             }

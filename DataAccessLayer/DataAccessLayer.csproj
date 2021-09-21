@@ -258,6 +258,14 @@
     <Compile Include="Migrations\202109191629141_Repare_Message_and_Contact.designer.cs">
       <DependentUpon>202109191629141_Repare_Message_and_Contact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109201536355_Rename_WriterID_to_SenderMail_in_Message_table.cs" />
+    <Compile Include="Migrations\202109201536355_Rename_WriterID_to_SenderMail_in_Message_table.designer.cs">
+      <DependentUpon>202109201536355_Rename_WriterID_to_SenderMail_in_Message_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.cs" />
+    <Compile Include="Migrations\202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.designer.cs">
+      <DependentUpon>202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -406,6 +414,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109191629141_Repare_Message_and_Contact.resx">
       <DependentUpon>202109191629141_Repare_Message_and_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109201536355_Rename_WriterID_to_SenderMail_in_Message_table.resx">
+      <DependentUpon>202109201536355_Rename_WriterID_to_SenderMail_in_Message_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.resx">
+      <DependentUpon>202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

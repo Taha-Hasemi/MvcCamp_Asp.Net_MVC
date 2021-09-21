@@ -35,7 +35,7 @@ namespace MVCProjeKampi.Controllers
             var inboxCount = messageManager.ListInbox("admin@gmail.com").Where(x => !x.MessageRead).Count();
             ViewBag.inboxCount = inboxCount;
 
-            var sendboxCount = messageManager.ListSendbox(6).Where(x => !x.MessageRead).Count();
+            var sendboxCount = messageManager.ListSendbox("admin@gmail.com").Where(x => !x.MessageRead).Count();
             ViewBag.sendboxCount = sendboxCount;
             return PartialView();
         }

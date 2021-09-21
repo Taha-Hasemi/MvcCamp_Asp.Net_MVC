@@ -18,9 +18,9 @@ namespace BusinessLayer.Concrete
             _messageDal = messageDal;
         }
 
-        public Message Belong(int writerID, int messageID)
+        public Message Belong(int messageID,string writerMail)
         {
-            throw new NotImplementedException();
+            return _messageDal.Get(x => x.MessageID == messageID && (x.SenderMail == writerMail||x.RecieverMail==writerMail));
         }
 
         public void DeleteMessage(Message message)
@@ -39,9 +39,9 @@ namespace BusinessLayer.Concrete
             return _messageDal.List(x => x.RecieverMail == mail && x.MessageStatus);
         }
 
-        public List<Message> ListSendbox(int id)
+        public List<Message> ListSendbox(string mail)
         {
-            return _messageDal.List(x => x.WriterID == id && x.MessageStatus);
+            return _messageDal.List(x => x.SenderMail == mail && x.MessageStatus);
         }
 
         public void MessageAdd(Message message)

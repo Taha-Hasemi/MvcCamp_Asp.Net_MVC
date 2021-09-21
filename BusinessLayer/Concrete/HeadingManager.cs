@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public Heading Belong(int writerID, int headingID)
         {
-            return _headingDal.List(x => x.HeadingID == headingID && x.WriterID == writerID).FirstOrDefault();
+            return _headingDal.Get(x => x.HeadingID == headingID && x.WriterID == writerID);
         }
 
         public void DeleteHeading(Heading heading)
