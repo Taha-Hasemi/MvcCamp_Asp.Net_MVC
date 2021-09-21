@@ -52,6 +52,9 @@ namespace MVCProjeKampi.Controllers
                 FormsAuthentication.SetAuthCookie(result.WriterName + writer.WriterSurName, false);
                 Session["WriterMail"] = result.WriterMail;
                 Session["WriterID"] = result.WriterID;
+                Session["WriterName"] = result.WriterName;
+                Session["WriterSurName"] = result.WriterSurName;
+                Session["WriterImage"] = result.WriterImage;
                 return RedirectToAction("Index", "WriterProfile");
             }
             else
