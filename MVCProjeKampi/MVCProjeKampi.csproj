@@ -142,7 +142,7 @@
     <Compile Include="Controllers\AdminPanel\HeadingController.cs" />
     <Compile Include="Controllers\AdminPanel\HomeController.cs" />
     <Compile Include="Controllers\AdminPanel\IstatistikController.cs" />
-    <Compile Include="Controllers\AdminPanel\LoginController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\AdminPanel\MessageController.cs" />
     <Compile Include="Controllers\SkillsProfileController.cs" />
     <Compile Include="Controllers\AdminPanel\WriterController.cs" />
@@ -2559,7 +2559,6 @@
     <Content Include="AdminLTE-3.0.4\login-form-20\scss\bootstrap\_variables.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-20\scss\style.scss" />
     <None Include="packages.config" />
-    <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Istatistik\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
@@ -2579,6 +2578,7 @@
     <Content Include="Views\WriterMessage\LeftMenuPartial.cshtml" />
     <Content Include="Views\WriterContent\Index.cshtml" />
     <Content Include="Views\Login\WriterLogin.cshtml" />
+    <Content Include="Views\ErrorPage\Page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">

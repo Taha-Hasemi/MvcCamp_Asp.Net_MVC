@@ -40,8 +40,6 @@ namespace MVCProjeKampi.Controllers.WriterPanel
             var inboxCount = messageManager.ListInbox(mail).Where(x => !x.MessageRead).Count();
             ViewBag.inboxCount = inboxCount;
 
-            var sendboxCount = messageManager.ListSendbox(mail).Where(x => !x.MessageRead).Count();
-            ViewBag.sendboxCount = sendboxCount;
             return PartialView();
         }
 
