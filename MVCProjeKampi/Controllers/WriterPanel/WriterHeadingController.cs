@@ -21,6 +21,13 @@ namespace MVCProjeKampi.Controllers.WriterPanel
             var values = headingManager.List().Where(x => x.WriterID == id).ToList();
             return View(values);
         }
+        [AllowAnonymous]
+        public ActionResult AllHeading()
+        {
+            var values = headingManager.ListActive();
+            return View(values);
+        }
+
         [HttpGet]
         public ActionResult AddHeading()
         {

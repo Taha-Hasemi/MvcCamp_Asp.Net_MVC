@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,22 @@ namespace MVCProjeKampi.Controllers.WriterPanel
             int id = (int)Session["WriterID"];
             var values = contentManager.ListByWriterID(id);
             return View(values);
+        }
+
+        [HttpGet]
+        public ActionResult AddContent(int id)
+        {
+            ViewBag.HeadingID = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddContent(Content content)
+        {
+            content.ContentDate = DateTime.Now;
+            content.WriterID = (int)Session["WriterID"];
+            content.ContentStatus = true;
+            contentManager.ContentAdd(content);
+            return RedirectToAction("AllHeading","WriterHeading");
         }
     }
 }
