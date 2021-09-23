@@ -49,7 +49,7 @@ to get the desired effect
             <a href="index3.html" class="brand-link">
                 <img src="~/AdminLTE-3.0.4/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                      style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">MVC Proje Kampı</span>
             </a>
 
             <!-- Sidebar -->
@@ -68,7 +68,7 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-         with font-awesome or any other icon font library -->
+                        with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview menu-open">
                             <a href="/WriterProfile/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -120,7 +120,7 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Default/Headings/" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Siteye Git
@@ -128,7 +128,7 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Login/LogOut/" class="nav-link">
                                 <i class="nav-icon far fa-plus-square"></i>
                                 <p>
                                     Çıkış Yap
@@ -148,7 +148,9 @@ to get the desired effect
 
             <!-- Main content -->
             <div class="content">
-                @RenderBody()
+                <div>
+                    @RenderBody()
+                </div>
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content -->

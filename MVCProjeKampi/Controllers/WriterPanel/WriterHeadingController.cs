@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MVCProjeKampi.Controllers.WriterPanel
 {
@@ -22,9 +24,9 @@ namespace MVCProjeKampi.Controllers.WriterPanel
             return View(values);
         }
         [AllowAnonymous]
-        public ActionResult AllHeading()
+        public ActionResult AllHeading(int sayfa = 1)
         {
-            var values = headingManager.ListActive();
+            var values = headingManager.ListActive().ToPagedList(sayfa,3);
             return View(values);
         }
 

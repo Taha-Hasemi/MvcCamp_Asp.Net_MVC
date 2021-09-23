@@ -1,8 +1,51 @@
-﻿
+﻿@model EntityLayer.Concrete.Writer
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
-<h2>Burasi Writer Profile</h2>
+@using (Html.BeginForm("Index", "WriterProfile", FormMethod.Post, new { enctype = "Multipart/form-data" }))
+{
+    <div class="form-group">
+        <div style="float: left; width:400px">
+            @Html.Label("Yazar Image:")<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="@Model.WriterImage" alt="Yazar Resmi" class="img-circle img-fluid" height="350" width="350" />
+            <br />
+            <br />
+            @Html.Label("Yazar Image:")
+            <input type="file" name="file" style="width:230px" class="btn btn-success" />
+        </div>
+        <div style="float:left; width:630px ">
+            @Html.HiddenFor(x => x.WriterID, new { @class = "form-control" })
+            @Html.HiddenFor(x => x.WriterImage, new { @class = "form-control" })
+            <br />
+            @Html.Label("Yazar Adı")
+            @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterName, "", new { @style = "color:red" })
+            <br />
+            @Html.Label("Yazar Soyadı")
+            @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterSurName, "", new { @style = "color:red" })
+            <br />
+            @Html.Label("Yazar Hakkında")
+            @Html.TextAreaFor(x => x.WriterAbout, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterAbout, "", new { @style = "color:red" })
+            <br />
+            @Html.Label("Yazar Mail")
+            @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterMail, "", new { @style = "color:red" })
+            <br />
+            @Html.Label("Yazar Şifresi")
+            @Html.PasswordFor(x => x.WriterPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterPassword, "", new { @style = "color:red" })
+            <br />
+            @Html.Label("Yazar Ünvanı")
+            @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterTitle, "", new { @style = "color:red" })
+            <br />
+            <button class="btn btn-info">Guncelle</button>
+        </div>
+    </div>
+}
+
 

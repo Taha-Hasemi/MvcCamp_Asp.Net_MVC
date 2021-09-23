@@ -186,3 +186,7 @@ C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Debug\MVCPro
 C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Debug\MVCProjeKampi.csproj.CopyComplete
 C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Debug\MVCProjeKampi.dll
 C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Debug\MVCProjeKampi.pdb
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\bin\PagedList.dll
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\bin\PagedList.Mvc.dll
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\bin\PagedList.xml
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\bin\PagedList.Mvc.xml

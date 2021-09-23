@@ -1,5 +1,7 @@
 ﻿@using EntityLayer.Concrete
-@model List<Heading>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Heading>
 @{
     ViewBag.Title = "AllHeading";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
@@ -149,6 +151,11 @@
     </div>
     <a href="/WriterHeading/AddHeading/" class="btn btn-info">Yeni Başlık Ekle</a>
 
+    @Html.PagedListPager((IPagedList)Model, Sayfa => Url.Action("AllHeading", new { Sayfa }), new PagedListRenderOptions
+    {
+    LiElementClasses = new List<string>
+    {"page-link"}
+    })
 </section>
 <!-- /.content-wrapper -->
 <!-- Control Sidebar -->
