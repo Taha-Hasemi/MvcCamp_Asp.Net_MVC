@@ -63,7 +63,18 @@ namespace BusinessLayer.Concrete
             byte[] veridizim2 = ASCIIEncoding.ASCII.GetBytes(admin.AdminUserName);
             admin.AdminUserName = Convert.ToBase64String(veridizim2);
 
-            return _adminDal.List().FirstOrDefault(x => x.AdminUserName == admin.AdminUserName && x.AdminPassword == admin.AdminPassword);
+            var admin2 = _adminDal.List().FirstOrDefault(x => x.AdminUserName == admin.AdminUserName && x.AdminPassword == admin.AdminPassword);
+
+            if (admin2 != null)
+            {
+                byte[] cozulenvarilerim = Convert.FromBase64String(admin2.AdminPassword);
+                admin2.AdminPassword = ASCIIEncoding.ASCII.GetString(cozulenvarilerim);
+
+                byte[] cozulenvarilerim2 = Convert.FromBase64String(admin2.AdminUserName);
+                admin2.AdminUserName = ASCIIEncoding.ASCII.GetString(cozulenvarilerim2);
+            }
+
+            return admin2;
         }
     }
 }
