@@ -2344,6 +2344,12 @@
     <Content Include="SS\Ekran Görüntüsü %28117%29.png" />
     <Content Include="SS\ProfileImage\photo_2021-07-29_17-03-43.jpg" />
     <Content Include="SS\ProfileImage\Resim.jpg" />
+    <Content Include="GalleryImages\902946.png" />
+    <Content Include="GalleryImages\Cyberpunk-Synthwave-4K-Ultra-HD-Wallpaper-3840x2160-16.jpg" />
+    <Content Include="GalleryImages\Programmer-Developer-Wallpaper.jpg" />
+    <Content Include="GalleryImages\UmSqOw.jpg" />
+    <Content Include="GalleryImages\wallpapersden.com-small-memory-3840x2160.jpg" />
+    <Content Include="GalleryImages\wp2856658.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
