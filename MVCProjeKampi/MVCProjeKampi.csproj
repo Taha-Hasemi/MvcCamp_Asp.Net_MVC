@@ -146,6 +146,7 @@
     <Compile Include="Controllers\AdminPanel\ErrorPageController.cs" />
     <Compile Include="Controllers\AdminPanel\GalleryController.cs" />
     <Compile Include="Controllers\AdminPanel\HeadingController.cs" />
+    <Compile Include="Controllers\GraphicsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AdminPanel\IstatistikController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -2663,6 +2664,7 @@
     <Content Include="Views\Message\SearchMenuSendbox.cshtml" />
     <Content Include="Views\Writer\SearchMenu.cshtml" />
     <Content Include="Views\Writer\SearchWriter.cshtml" />
+    <Content Include="Views\Graphics\CategoryChartIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
