@@ -2655,6 +2655,8 @@
     <Content Include="Views\Message\SearchMessageSendbox.cshtml" />
     <Content Include="Views\Message\SearchMenuInbox.cshtml" />
     <Content Include="Views\Message\SearchMenuSendbox.cshtml" />
+    <Content Include="Views\Writer\SearchMenu.cshtml" />
+    <Content Include="Views\Writer\SearchWriter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">

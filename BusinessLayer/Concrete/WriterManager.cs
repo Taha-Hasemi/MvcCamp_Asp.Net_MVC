@@ -55,5 +55,10 @@ namespace BusinessLayer.Concrete
 
             return _writerDal.List().FirstOrDefault(x => x.WriterMail == writer.WriterMail && x.WriterPassword == writer.WriterPassword);
         }
+
+        public List<Writer> List(string word)
+        {
+            return _writerDal.List(x => (x.WriterName + " " + x.WriterSurName).Contains(word)).OrderByDescending(x => x.WriterID).ToList();
+        }
     }
 }

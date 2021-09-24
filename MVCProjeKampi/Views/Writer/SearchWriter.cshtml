@@ -1,7 +1,8 @@
 ﻿@using EntityLayer.Concrete
 @model List<Writer>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "SearchWriter";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -26,7 +27,7 @@
 <body class="hold-transition sidebar-mini">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        @Html.Action("SearchMenu","Writer")
+        @Html.Action("SearchMenu", "Writer")
     </section>
 
     <!-- Main content -->

@@ -19,6 +19,24 @@ namespace MVCProjeKampi.Controllers
             var writerValue = writerManager.List();
             return View(writerValue);
         }
+        public ActionResult SearchWriter(string word)
+        {
+            if (!string.IsNullOrEmpty(word))
+            {
+                var values = writerManager.List(word);
+                return View(values);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
+        public PartialViewResult SearchMenu()
+        {
+            return PartialView();
+        }
+
         [HttpGet]
         public ActionResult AddWriter()
         {
