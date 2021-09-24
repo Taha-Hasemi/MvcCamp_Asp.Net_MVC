@@ -42,7 +42,16 @@ namespace BusinessLayer.Concrete
 
         public List<Admin> List()
         {
-            return _adminDal.List();
+            var admin = _adminDal.List();
+            foreach (var item in admin)
+            {
+                byte[] cozulenvarilerim = Convert.FromBase64String(item.AdminPassword);
+                item.AdminPassword = ASCIIEncoding.ASCII.GetString(cozulenvarilerim);
+
+                byte[] cozulenvarilerim2 = Convert.FromBase64String(item.AdminUserName);
+                item.AdminUserName = ASCIIEncoding.ASCII.GetString(cozulenvarilerim2);
+            }
+            return admin;
         }
 
         public Admin Login(Admin admin)
