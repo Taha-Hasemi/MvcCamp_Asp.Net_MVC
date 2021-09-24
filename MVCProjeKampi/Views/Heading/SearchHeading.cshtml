@@ -1,7 +1,8 @@
 ﻿@using EntityLayer.Concrete
 @model List<Heading>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "SearchHeading";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 @{ string color = "";}
@@ -11,7 +12,8 @@
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
-    @Html.Action("SearchMenu","Heading")
+    @Html.Action("SearchMenu", "Heading")
+    <!-- /.container-fluid -->
 </section>
 
 <!-- Main content -->
@@ -174,26 +176,3 @@
 
 
 
-@*<br />
-    <form class="form form-group">
-        <table class="table table-bordered">
-            <tr>
-                <th>#</th>
-                <th>Başlık</th>
-                <th>Kategori</th>
-                <th>Sil</th>
-                <th>Güncelle</th>
-            </tr>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <th>@item.HeadingID</th>
-                    <td>@item.HeadingName</td>
-                    <td>@item.Category.CategoryName</td>
-                    <td><a href="/Heading/DeleteHeading/@item.HeadingID" class="btn btn-danger">Sil</a></td>
-                    <td><a href="/Heading/UpdateHeading/@item.HeadingID" class="btn btn-success">Güncelle</a></td>
-                </tr>
-            }
-        </table>
-        <a href="/Heading/AddHeading" class="btn btn-info">Yeni Baslik Ekle</a>
-    </form>*@

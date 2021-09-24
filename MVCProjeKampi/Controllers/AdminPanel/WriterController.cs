@@ -27,7 +27,7 @@ namespace MVCProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddWriter(Writer writer)
         {
-            if (Request.Files.Count > 0)
+            if (Request.Files.Count > 0 && Request.Files[0].FileName != "")
             {
                 Request.Files[0].SaveAs(Server.MapPath("~/Images/" + Request.Files[0].FileName));
                 writer.WriterImage = "/Images/" + Request.Files[0].FileName;
@@ -58,7 +58,7 @@ namespace MVCProjeKampi.Controllers
         [HttpPost]
         public ActionResult UpdateWriter(Writer writer)
         {
-            if (Request.Files.Count > 0)
+            if (Request.Files.Count > 0 && Request.Files[0].FileName != "")
             {
                 Request.Files[0].SaveAs(Server.MapPath("~/Images/" + Request.Files[0].FileName));
                 writer.WriterImage = "/Images/" + Request.Files[0].FileName;

@@ -29,13 +29,15 @@ namespace MVCProjeKampi.Controllers
         }
         public PartialViewResult LeftMenuPartial()
         {
+            string mail = (string)Session["AdminMail"];
+
             var contactCount = contactManager.List().Where(x => !x.MessageRead).Count();
             ViewBag.contactCount = contactCount;
 
-            var inboxCount = messageManager.ListInbox("admin@gmail.com").Where(x => !x.MessageRead).Count();
+            var inboxCount = messageManager.ListInbox(mail).Where(x => !x.MessageRead).Count();
             ViewBag.inboxCount = inboxCount;
 
-            var sendboxCount = messageManager.ListSendbox("admin@gmail.com").Where(x => !x.MessageRead).Count();
+            var sendboxCount = messageManager.ListSendbox(mail).Where(x => !x.MessageRead).Count();
             ViewBag.sendboxCount = sendboxCount;
             return PartialView();
         }

@@ -266,6 +266,10 @@
     <Compile Include="Migrations\202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.designer.cs">
       <DependentUpon>202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109241327098_Add_AdminMail_in_Admin_table.cs" />
+    <Compile Include="Migrations\202109241327098_Add_AdminMail_in_Admin_table.designer.cs">
+      <DependentUpon>202109241327098_Add_AdminMail_in_Admin_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -420,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.resx">
       <DependentUpon>202109201538076_Rename_WriterID_to_SenderMail_in_Message_table_Repare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109241327098_Add_AdminMail_in_Admin_table.resx">
+      <DependentUpon>202109241327098_Add_AdminMail_in_Admin_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

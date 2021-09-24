@@ -22,14 +22,56 @@ namespace MVCProjeKampi.Controllers
 
         public ActionResult Inbox()
         {
-            var messageList = messageManager.ListInbox("admin@gmail.com");
+            string mail = (string)Session["AdminMail"];
+            var messageList = messageManager.ListInbox(mail);
             return View(messageList);
         }
         public ActionResult Sendbox()
         {
-            var messageList = messageManager.ListSendbox("admin@gmail.com");
+            string mail = (string)Session["AdminMail"];
+            var messageList = messageManager.ListSendbox(mail);
             return View(messageList);
         }
+
+        public ActionResult SearchMessageInbox(string word)
+        {
+            string mail = (string)Session["AdminMail"];
+            if (!string.IsNullOrEmpty(word))
+            {
+                var values = messageManager.ListInbox(word, mail);
+                return View(values);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult SearchMessageSendbox(string word)
+        {
+            string mail = (string)Session["AdminMail"];
+            if (!string.IsNullOrEmpty(word))
+            {
+                var values = messageManager.ListSendbox(word, mail);
+                return View(values);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
+
+        public PartialViewResult SearchMenuInbox()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult SearchMenuSendbox()
+        {
+            return PartialView();
+        }
+
 
         public PartialViewResult InboxPartial(int id)
         {
@@ -45,11 +87,19 @@ namespace MVCProjeKampi.Controllers
 
         public ActionResult GetMessageDetails(int id, string type)
         {
-            ViewBag.MessageType = type;
-            var messageValues = messageManager.GetByID(id);
-            messageValues.MessageRead = true;
-            messageManager.MessageUpdate(messageValues);
-            return View(messageValues);
+            var result = messageManager.Belong(id, (string)Session["AdminMail"]);
+            if (result != null)
+            {
+                ViewBag.MessageType = type;
+                var messageValues = messageManager.GetByID(id);
+                messageValues.MessageRead = true;
+                messageManager.MessageUpdate(messageValues);
+                return View(messageValues);
+            }
+            else
+            {
+                return RedirectToAction("Page404", "ErrorPage");
+            }
         }
 
         [HttpGet]
@@ -80,8 +130,7 @@ namespace MVCProjeKampi.Controllers
             {
                 message.MessageDate = DateTime.Now;
                 message.MessageStatus = true;
-                //////SEŞŞINDAN SONRA DÜZELTİLSİN/////////
-                message.SenderMail = "admin@gmail.com";
+                message.SenderMail = (string)Session["AdminMail"];
                 messageManager.MessageAdd(message);
                 return RedirectToAction("Sendbox");
             }

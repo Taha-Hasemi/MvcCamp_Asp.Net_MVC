@@ -15,11 +15,36 @@ namespace MVCProjeKampi.Controllers
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
-        public ActionResult Index()
+        public ActionResult Index(int id = 0)
         {
-            var headingValues = headingManager.List();
-            return View(headingValues);
+            if (id == 0)
+            {
+                var headingValues = headingManager.List();
+                return View(headingValues);
+            }
+            else
+            {
+                var values = headingManager.ListByCategory(id);
+                return View(values);
+            }
         }
+        public ActionResult SearchHeading(string word)
+        {
+            if (!string.IsNullOrEmpty(word))
+            {
+                var values = headingManager.List(word);
+                return View(values);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+        public PartialViewResult SearchMenu()
+        {
+            return PartialView();
+        }
+
         [HttpGet]
         public ActionResult AddHeading()
         {

@@ -34,6 +34,15 @@ namespace BusinessLayer.Concrete
             return _messageDal.Get(x => x.MessageID == id);
         }
 
+        public List<Message> ListInbox(string word,string mail)
+        {
+            return _messageDal.List(x => x.RecieverMail == mail && (x.MessageContent.Contains(word) || x.Subject.Contains(word))).OrderByDescending(x=>x.MessageID).ToList();
+        }
+        public List<Message> ListSendbox(string word, string mail)
+        {
+            return _messageDal.List(x => x.SenderMail == mail && (x.MessageContent.Contains(word) || x.Subject.Contains(word))).OrderByDescending(x => x.MessageID).ToList();
+        }
+
         public List<Message> ListInbox(string mail)
         {
             return _messageDal.List(x => x.RecieverMail == mail && x.MessageStatus);

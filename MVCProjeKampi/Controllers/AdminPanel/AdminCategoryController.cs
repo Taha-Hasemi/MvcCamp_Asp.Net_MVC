@@ -11,12 +11,12 @@ using System.Web.Mvc;
 
 namespace MVCProjeKampi.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminCategoryController : Controller
     {
         // GET: AdminCategory
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
 
-        [Authorize(Roles = "DJ")]
         public ActionResult Index()
         {
             var categoryValues = categoryManager.List().OrderByDescending(x => x.CategoryID).ToList();

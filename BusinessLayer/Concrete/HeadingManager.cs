@@ -48,9 +48,19 @@ namespace BusinessLayer.Concrete
             return _headingDal.List().OrderByDescending(x => x.HeadingID).ToList();
         }
 
+        public List<Heading> List(string word)
+        {
+            return _headingDal.List(x => x.HeadingName.Contains(word)).OrderByDescending(x=>x.HeadingID).ToList();
+        }
+
         public List<Heading> ListActive()
         {
             return _headingDal.List(x=>x.HeadingStatus).OrderByDescending(x => x.HeadingID).ToList();
+        }
+
+        public List<Heading> ListByCategory(int categoryID)
+        {
+            return _headingDal.List(x => x.CategoryID == categoryID).OrderByDescending(x=>x.HeadingID).ToList();
         }
     }
 }

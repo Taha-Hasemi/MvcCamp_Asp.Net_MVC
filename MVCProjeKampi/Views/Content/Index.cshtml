@@ -1,14 +1,14 @@
 ﻿@using EntityLayer.Concrete
 @model List<Content>
 @{
-    ViewBag.Title = "ContentByHeading";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
     <br />
-    @Html.Action("SearchMenu","Content")
+    @Html.Action("SearchMenu", "Content")
     <br />
     <div class="wrapper">
         <section class="content">

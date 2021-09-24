@@ -9,14 +9,14 @@
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
-        <th>Hakkımda Başlığı</th>
+        <th>Hakkımda</th>
         <th>Aktif-Pasif yap</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.AboutID</td>
-            <td>Baslik</td>
+            <td>@item.AboutDetails1</td>
             <td>
                 @if (item.AboutState)
                 {

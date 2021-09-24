@@ -30,6 +30,8 @@ namespace MVCProjeKampi.Controllers
             {
                 FormsAuthentication.SetAuthCookie(result.AdminUserName, false);
                 Session["AdminUserName"] = result.AdminUserName;
+                Session["AdminID"] = result.AdminID;
+                Session["AdminMail"] = result.AdminMail;
                 return RedirectToAction("Index", "AdminCategory");
             }
             else

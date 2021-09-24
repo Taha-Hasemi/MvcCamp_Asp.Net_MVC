@@ -48,6 +48,11 @@ namespace BusinessLayer.Concrete
             return _contentDal.List();
         }
 
+        public List<Content> List(string word)
+        {
+            return _contentDal.List(x => x.ContentValue.Contains(word) || x.Heading.HeadingName.Contains(word)).OrderByDescending(x => x.ContentID).ToList();
+        }
+
         public List<Content> ListByHeadingID(int id)
         {
             return _contentDal.List(x => x.HeadingID == id);

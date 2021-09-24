@@ -32,12 +32,7 @@
                         <h3 class="card-title">Kişisel Gelen Mesajlar</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control" placeholder="Mail Kutusunda Ara">
-                                <div class="input-group-append">
-                                    <div class="btn btn-primary">
-                                        <i class="fas fa-search"></i>
-                                    </div>
-                                </div>
+                                @Html.Action("SearchMenuInbox","Message")
                             </div>
                         </div>
                         <!-- /.card-tools -->
@@ -81,7 +76,7 @@
                                                 </div>
                                             </td>
                                             <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetMessageDetails/@item.MessageID/Inbox">@item.Writer.WriterName @item.Writer.WriterSurName</a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetMessageDetails/@item.MessageID/Inbox">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> - @item.MessageContent.Substring(0, 3) ...
                                             </td>

@@ -14,8 +14,26 @@ namespace MVCProjeKampi.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var values = contentManager.List();
+            return View(values);
         }
+        public ActionResult SearchContent(string word)
+        {
+            if (!string.IsNullOrEmpty(word))
+            {
+                var values = contentManager.List(word);
+                return View(values);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+        public PartialViewResult SearchMenu()
+        {
+            return PartialView();
+        }
+
         public ActionResult ContentByHeading(int id)
         {
             var contentValues = contentManager.ListByHeadingID(id);

@@ -19,6 +19,7 @@
         </div>
         <div style="float:left; width:630px ">
             @Html.HiddenFor(x => x.WriterID, new { @class = "form-control" })
+            @Html.HiddenFor(x => x.WriterImage, new { @class = "form-control" })
             <br />
             @Html.Label("Yazar Adı")
             @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
