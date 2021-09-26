@@ -18,7 +18,7 @@ namespace EntityLayer.Concrete
 
 
         public int AdminID { get; set; }
-        public Admin Admin { get; set; }
+        public virtual Admin Admin { get; set; }
 
     }
 }

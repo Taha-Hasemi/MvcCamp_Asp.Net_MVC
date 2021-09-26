@@ -22,6 +22,6 @@ namespace EntityLayer.Concrete
         public string AdminMail { get; set; }
 
 
-        public List<UserRole> UserRoles { get; set; }
+        public virtual List<UserRole> UserRoles { get; set; }
     }
 }

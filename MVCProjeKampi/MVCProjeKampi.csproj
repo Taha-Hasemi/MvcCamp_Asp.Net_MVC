@@ -140,6 +140,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminPanel\AboutController.cs" />
     <Compile Include="Controllers\AdminPanel\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AdminPanel\AuthorizationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\AdminPanel\ContactController.cs" />
     <Compile Include="Controllers\AdminPanel\ContentController.cs" />
@@ -2665,6 +2666,7 @@
     <Content Include="Views\Writer\SearchMenu.cshtml" />
     <Content Include="Views\Writer\SearchWriter.cshtml" />
     <Content Include="Views\Graphics\CategoryChartIndex.cshtml" />
+    <Content Include="Views\Authorization\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
