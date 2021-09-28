@@ -2667,6 +2667,9 @@
     <Content Include="Views\Writer\SearchWriter.cshtml" />
     <Content Include="Views\Graphics\CategoryChartIndex.cshtml" />
     <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\Authorization\AddAdmin.cshtml" />
+    <Content Include="Views\Authorization\UserRoleIndex.cshtml" />
+    <Content Include="Views\Authorization\AddRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">

@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concrete.UserRole
+
+@{
+    ViewBag.Title = "AddRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddRole", "Authorization", FormMethod.Post))
+{
+    <div class="form-group">
+        <input type="hidden" value="@ViewBag.AdminID" name="AdminID" />
+
+
+        @Html.Label("Role")
+        @Html.TextBoxFor(x => x.RoleName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.RoleName, "", new { @style = "color:red" })
+        <br />
+        <button class="btn btn-info">Ekle</button>
+    </div>
+}
+

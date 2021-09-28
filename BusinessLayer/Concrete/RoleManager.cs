@@ -27,6 +27,10 @@ namespace BusinessLayer.Concrete
         {
             return _roleDal.Get(x => x.RoleID == id);
         }
+        public List<UserRole> GetByAdminID(int id)
+        {
+            return _roleDal.List(x => x.AdminID == id);
+        }
 
         public List<UserRole> List()
         {
@@ -41,6 +45,12 @@ namespace BusinessLayer.Concrete
         public void RoleUpdate(UserRole role)
         {
             _roleDal.Update(role);
+        }
+
+        public void DeleteRoleByID(int id)
+        {
+            var role = _roleDal.Get(x => x.RoleID == id);
+            _roleDal.Delete(role);
         }
     }
 }

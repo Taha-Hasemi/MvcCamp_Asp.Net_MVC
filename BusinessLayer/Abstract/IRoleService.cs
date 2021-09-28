@@ -13,6 +13,8 @@ namespace BusinessLayer.Abstract
         List<UserRole> List();
         void RoleAdd(UserRole role);
         UserRole GetByID(int id);
+        void DeleteRoleByID(int id);
+        List<UserRole> GetByAdminID(int id);
         void DeleteRole(UserRole role);
         void RoleUpdate(UserRole role);
     }

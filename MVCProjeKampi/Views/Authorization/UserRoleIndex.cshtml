@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model List<UserRole>
+
+@{
+    ViewBag.Title = "UserRoleIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form class="form form-group">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Role Adi</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.RoleID</th>
+                <th>@item.RoleName</th>
+                <td>
+                    <a href="/Authorization/DeleteRole/@item.RoleID" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a href="/Authorization/AddRole/@ViewBag.AdminID" class="btn btn-info">Yeni Role Ekle</a>
+</form>
+

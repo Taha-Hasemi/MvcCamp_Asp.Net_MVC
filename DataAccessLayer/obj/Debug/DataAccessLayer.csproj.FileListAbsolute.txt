@@ -124,3 +124,5 @@ C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\Data
 C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Rename_WriterID_to_SenderMail_in_Message_table_Repare.resources
 C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_AdminMail_in_Admin_table.resources
 C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.repare1_1.resources
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Add_AdminStatus_in_Admin_Table.resources
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Repare2_2.resources

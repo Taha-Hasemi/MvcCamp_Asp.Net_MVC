@@ -18,11 +18,23 @@ namespace BusinessLayer.Concrete
             _adminDal = adminDal;
         }
 
+        public void Active(int id)
+        {
+            var admin = _adminDal.Get(x => x.AdminID == id);
+            admin.AdminStatus = true;
+            _adminDal.Update(admin);
+        }
+
         public void AdminAdd(Admin admin)
         {
             //ForOnHashing
-            //byte[] cozulenvarilerim = Convert.FromBase64String(admin.AdminPassword);
-            //admin.AdminPassword = ASCIIEncoding.ASCII.GetString(cozulenvarilerim);
+            byte[] veridizim = ASCIIEncoding.ASCII.GetBytes(admin.AdminPassword);
+            admin.AdminPassword = Convert.ToBase64String(veridizim);
+
+            byte[] veridizim2 = ASCIIEncoding.ASCII.GetBytes(admin.AdminUserName);
+            admin.AdminUserName = Convert.ToBase64String(veridizim2);
+
+            _adminDal.Insert(admin);
         }
 
         public void AdminDelete(Admin admin)
@@ -83,6 +95,13 @@ namespace BusinessLayer.Concrete
             }
 
             return admin2;
+        }
+
+        public void Passive(int id)
+        {
+            var admin = _adminDal.Get(x => x.AdminID == id);
+            admin.AdminStatus = false;
+            _adminDal.Update(admin);
         }
     }
 }
