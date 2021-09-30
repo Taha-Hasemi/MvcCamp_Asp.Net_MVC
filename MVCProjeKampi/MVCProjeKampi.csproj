@@ -2066,6 +2066,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Files\1.png" />
+    <Content Include="Files\2.jpg" />
+    <Content Include="Files\3.jpg" />
+    <Content Include="Files\4.png" />
+    <Content Include="Files\5.png" />
+    <Content Include="Files\7.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -2340,6 +2346,9 @@
     <Content Include="AdminLTE-3.0.4\login-form-20\js\main.js" />
     <Content Include="AdminLTE-3.0.4\login-form-20\js\popper.js" />
     <Content Include="AdminLTE-3.0.4\login-form-20\main.html" />
+    <Content Include="Images\20210228_082020 %282%29.jpg" />
+    <Content Include="Images\20210228_082020.jpg" />
+    <Content Include="Images\Coffee1.png" />
     <Content Include="Script\additional-methods.js" />
     <Content Include="Script\additional-methods.min.js" />
     <Content Include="Script\bootstrap.bundle.js" />
@@ -2539,9 +2548,9 @@
     <Content Include="SkillsProfileWidget\w3layouts-License.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AdminLTE-3.0.4\login-form-19\fonts\" />
+    <Folder Include="AdminLTE-3.0.4\login-form-20\fonts\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Files\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -2553,15 +2562,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\css\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\css\bootstrap\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\css\bootstrap\mixins\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\fonts\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\images\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\js\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\scss\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\scss\bootstrap\.DS_Store" />
     <Content Include="AdminLTE-3.0.4\login-form-19\scss\bootstrap\bootstrap-grid.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-19\scss\bootstrap\bootstrap-reboot.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-19\scss\bootstrap\bootstrap.scss" />
@@ -2652,15 +2652,6 @@
     <Content Include="AdminLTE-3.0.4\login-form-19\scss\bootstrap\_utilities.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-19\scss\bootstrap\_variables.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-19\scss\style.scss" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\css\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\css\bootstrap\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\css\bootstrap\mixins\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\fonts\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\images\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\js\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\scss\.DS_Store" />
-    <Content Include="AdminLTE-3.0.4\login-form-20\scss\bootstrap\.DS_Store" />
     <Content Include="AdminLTE-3.0.4\login-form-20\scss\bootstrap\bootstrap-grid.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-20\scss\bootstrap\bootstrap-reboot.scss" />
     <Content Include="AdminLTE-3.0.4\login-form-20\scss\bootstrap\bootstrap.scss" />
@@ -2811,6 +2802,10 @@
     <Content Include="Script\bootstrap.bundle.min.js.map" />
     <Content Include="Script\bootstrap.js.map" />
     <Content Include="Script\bootstrap.min.js.map" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings1.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
