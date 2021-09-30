@@ -1,0 +1,15 @@
+﻿<div class="mailbox-read-info">
+    <h5>@Model.Subject</h5>
+    <br />
+    <h6>
+        Alıcı Mail: @Model.RecieverMail
+        <span class="mailbox-read-time float-right">@(((DateTime)Model.MessageDate).ToString("dd-MMM-yyyy mm-HH"))</span>
+    </h6>
+</div>
+<!-- /.mailbox-read-info -->
+<!-- /.mailbox-controls -->
+<div class="mailbox-read-message">
+    <p>@Html.Raw(@Model.MessageContent)</p>
+    <img src="@Model.FileName" alt="Dosya" height="100" />
+</div>
+<!-- /.mailbox-read-message -->
