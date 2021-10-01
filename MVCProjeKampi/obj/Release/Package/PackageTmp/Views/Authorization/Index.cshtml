@@ -1,0 +1,77 @@
+﻿@using EntityLayer.Concrete
+@model List<Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{ string color = "";}
+@{ string statusColor = "";}
+@{ string AdminStatus = "";}
+
+
+
+<br />
+<form class="form form-group">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ad</th>
+            <th>Rolleri</th>
+            <th>Mail</th>
+            <th>Status</th>
+            <th>Activate</th>
+            <th>Yerkisini Değiştir</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            if (item.AdminStatus)
+            {
+                AdminStatus = "Aktif";
+                statusColor = "badge badge-success";
+            }
+            else
+            {
+                AdminStatus = "Pasif";
+                statusColor = "badge badge-danger";
+            }
+            <tr>
+                <th>@item.AdminID</th>
+                <th>@item.AdminUserName</th>
+                <td>
+                    @foreach (var role in item.UserRoles)
+                    {
+                        <b>-@role.RoleName </b>
+                    }
+                </td>
+                <td>@item.AdminMail</td>
+                <td>
+                    <span class="@statusColor">@AdminStatus</span>
+                </td>
+                <td>
+                    @if (!item.AdminStatus)
+                    {
+                        <a class="btn btn-success btn-sm" href="/Authorization/Active/@item.AdminID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Aktif Yap
+                        </a>
+                    }
+                    @if (item.AdminStatus)
+                    {
+                        <a class="btn btn-danger btn-sm" href="/Authorization/Passive/@item.AdminID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Pasif Yap
+                        </a>
+                    }
+                </td>
+                <td><a href="/Authorization/UserRoleIndex/@item.AdminID" class="btn btn-warning">Yetki Değiştir</a></td>
+                <td>@*<a href="/AdminCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a>*@</td>
+            </tr>
+        }
+    </table>
+    <a href="/Authorization/AddAdmin" class="btn btn-info">Yeni Admin Ekle</a>
+</form>
+
+

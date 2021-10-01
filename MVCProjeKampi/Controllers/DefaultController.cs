@@ -23,6 +23,11 @@ namespace MVCProjeKampi.Controllers
 
         public PartialViewResult Index(int id = 0)
         {
+            if (id == 0)
+            {
+                var allValues = contentManager.List();
+                return PartialView(allValues);
+            }
             var values = contentManager.ListByHeadingID(id);
             return PartialView(values);
         }

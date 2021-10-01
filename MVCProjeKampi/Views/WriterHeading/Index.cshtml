@@ -130,7 +130,7 @@
                                 <span class="@color">@item.Category.CategoryName</span>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingID">
+                                <a class="btn btn-primary btn-sm" href="/WriterContent/ContentByHeading/@item.HeadingID">
                                     <i class="fas fa-folder">
                                     </i>
                                     Yazılar
@@ -139,6 +139,11 @@
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Düzenle
+                                </a>
+                                <a class="btn btn-info btn-sm" href="/WriterContent/AddContent/@item.HeadingID">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Başlığa yaz
                                 </a>
                                 @if (!item.HeadingStatus)
                                 {

@@ -1,0 +1,41 @@
+﻿@model EntityLayer.Concrete.Skill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddSkill", "SkillsProfile", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Ad")
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Name, "", new { @style = "color:red" })
+        <br /><br />
+        @Html.Label("Yetenek1");
+        @Html.TextBoxFor(x => x.Skill1, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Skill1, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Rate1");
+        @Html.TextBoxFor(x => x.Rate1, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Rate1, "", new { @style = "color:red" })
+        <br /><br />
+        @Html.Label("Yetenek2");
+        @Html.TextBoxFor(x => x.Skill2, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Skill2, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Rate2");
+        @Html.TextBoxFor(x => x.Rate2, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Rate2, "", new { @style = "color:red" })
+        <br /><br />
+        @Html.Label("Yetenek3");
+        @Html.TextBoxFor(x => x.Skill3, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Skill3, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Rate3");
+        @Html.TextBoxFor(x => x.Rate3, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Rate3, "", new { @style = "color:red" })
+        <br /><br />
+        <button class="btn btn-info">Ekle</button>
+    </div>
+}
+

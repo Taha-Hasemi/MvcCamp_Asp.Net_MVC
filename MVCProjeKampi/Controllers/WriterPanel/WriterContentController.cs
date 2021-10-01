@@ -35,5 +35,10 @@ namespace MVCProjeKampi.Controllers.WriterPanel
             contentManager.ContentAdd(content);
             return RedirectToAction("AllHeading","WriterHeading");
         }
+        public ActionResult ContentByHeading(int id)
+        {
+            var contentValues = contentManager.ListByHeadingID(id);
+            return View(contentValues);
+        }
     }
 }

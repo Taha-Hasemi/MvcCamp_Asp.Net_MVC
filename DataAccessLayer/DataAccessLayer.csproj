@@ -282,6 +282,14 @@
     <Compile Include="Migrations\202109281102172_Repare2_2.designer.cs">
       <DependentUpon>202109281102172_Repare2_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110010804073_Edit_Skill_table.cs" />
+    <Compile Include="Migrations\202110010804073_Edit_Skill_table.designer.cs">
+      <DependentUpon>202110010804073_Edit_Skill_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110010809075_Edit_Skill_table2.cs" />
+    <Compile Include="Migrations\202110010809075_Edit_Skill_table2.designer.cs">
+      <DependentUpon>202110010809075_Edit_Skill_table2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -448,6 +456,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109281102172_Repare2_2.resx">
       <DependentUpon>202109281102172_Repare2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010804073_Edit_Skill_table.resx">
+      <DependentUpon>202110010804073_Edit_Skill_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010809075_Edit_Skill_table2.resx">
+      <DependentUpon>202110010809075_Edit_Skill_table2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

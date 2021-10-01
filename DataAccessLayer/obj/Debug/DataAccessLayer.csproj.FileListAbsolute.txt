@@ -260,3 +260,5 @@ E:\proje\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.Co
 E:\proje\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 E:\proje\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\proje\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Edit_Skill_table.resources
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Edit_Skill_table2.resources

@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model Admin
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddAdmin", "Authorization", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Admin Adı")
+        @Html.TextBoxFor(x => x.AdminUserName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.AdminUserName, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Admin Şifresi")
+        @Html.TextBoxFor(x => x.AdminPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.AdminPassword, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Admin Mail")
+        @Html.TextBoxFor(x => x.AdminMail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.AdminMail, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Admin Role")
+        @Html.TextBoxFor(x => x.UserRoles[0].RoleName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UserRoles[0].RoleName, "", new { @style = "color:red" })
+        <br />
+        <button class="btn btn-info">Ekle</button>
+    </div>
+}
+

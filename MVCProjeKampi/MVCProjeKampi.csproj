@@ -153,6 +153,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\AdminPanel\MessageController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\SkillsProfileController.cs" />
     <Compile Include="Controllers\AdminPanel\WriterController.cs" />
     <Compile Include="Controllers\WriterPanel\WriterContentController.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role\AdminRoleProvider.cs" />
   </ItemGroup>
@@ -2346,6 +2348,12 @@
     <Content Include="AdminLTE-3.0.4\login-form-20\js\main.js" />
     <Content Include="AdminLTE-3.0.4\login-form-20\js\popper.js" />
     <Content Include="AdminLTE-3.0.4\login-form-20\main.html" />
+    <Content Include="HomePageImages\Ekran Görüntüsü %28132%29.png" />
+    <Content Include="HomePageImages\Ekran Görüntüsü %28133%29.png" />
+    <Content Include="HomePageImages\Ekran Görüntüsü %28134%29.png" />
+    <Content Include="HomePageImages\Ekran Görüntüsü %28135%29.png" />
+    <Content Include="HomePageImages\Ekran Görüntüsü %28136%29.png" />
+    <Content Include="HomePageImages\Ekran Görüntüsü %28137%29.png" />
     <Content Include="Images\20210228_082020 %282%29.jpg" />
     <Content Include="Images\20210228_082020.jpg" />
     <Content Include="Images\Coffee1.png" />
@@ -2551,7 +2559,6 @@
     <Folder Include="AdminLTE-3.0.4\login-form-19\fonts\" />
     <Folder Include="AdminLTE-3.0.4\login-form-20\fonts\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2759,7 +2766,6 @@
     <Content Include="Views\Istatistik\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Contact\NewMessageIcon.cshtml" />
-    <Content Include="Views\SkillsProfile\Index.cshtml" />
     <Content Include="Views\Shared\_WriterLayout.cshtml" />
     <Content Include="Views\WriterProfile\Index.cshtml" />
     <Content Include="Views\WriterHeading\Index.cshtml" />
@@ -2806,6 +2812,11 @@
     <None Include="Properties\PublishProfiles\Default Settings1.pubxml" />
     <None Include="Properties\PublishProfiles\Default Settings2.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\SkillsProfile\Index.cshtml" />
+    <Content Include="Views\SkillsProfile\SkillDetails.cshtml" />
+    <Content Include="Views\SkillsProfile\AddSkill.cshtml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\WriterContent\ContentByHeading.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">

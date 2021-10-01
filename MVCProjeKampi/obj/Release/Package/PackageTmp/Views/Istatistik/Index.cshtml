@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<div class="card-deck">
+    <div class="card text-white bg-primary mb-4 " style="max-width: 20rem;">
+        <div class="card-header">Toplam Kategori Sayısı</div>
+        <div class="card-body">
+            <h5 class="card-text">@ViewBag.CategoryCount</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-secondary mb-4 " style="max-width: 20rem;">
+        <div class="card-header">Yazılım Kategorisi Başlık Sayısı</div>
+        <div class="card-body">
+            <h5 class="card-text"> @ViewBag.ProgrammingCategoryCount</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-warning mb-4 " style="max-width: 20rem; ">
+        <div class="card-header">Yazarların İsimlerinde "a" Harfi Bulunanlar</div>
+        <div class="card-body">
+            <h5 class="card-text">@ViewBag.WriterNameContains_a</h5>
+        </div>
+    </div>
+</div>
+
+
+<div class="card-deck">
+
+    <div class="card text-white bg-fuchsia mb-6 " style="max-width: 20rem;">
+        <div class="card-header">En Fazla Başlığı Olan Kategori Adı</div>
+        <div class="card-body">
+            <h5 class="card-text"> @ViewBag.MostHeadings</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-primary mb-6 " style="max-width: 20rem; height:auto">
+        <div class="card-header">Kategoriler Tablosunda T/F Farkı </div>
+        <div class="card-body">
+            <h5 class="card-text">@ViewBag.TrueAndFalseCategory</h5>
+        </div>
+    </div>
+</div>
+
