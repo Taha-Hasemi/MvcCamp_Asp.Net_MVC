@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="E:\proje\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Release\Package\PackageTmp" />
-  <setAcl path="E:\proje\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="E:\proje\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\MVCProjeKampi\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

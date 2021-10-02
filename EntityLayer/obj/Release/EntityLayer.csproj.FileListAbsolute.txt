@@ -9,3 +9,15 @@ E:\proje\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.csproj.CoreComp
 E:\proje\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.csproj.CopyComplete
 E:\proje\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.dll
 E:\proje\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.pdb
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityLayer.dll.config
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityLayer.dll
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityLayer.pdb
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityFramework.dll
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityFramework.xml
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.csprojAssemblyReference.cache
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.csproj.CopyComplete
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.dll
+C:\Users\RTC9911\source\repos\MvcCamp_Asp.Net_MVC\EntityLayer\obj\Release\EntityLayer.pdb

@@ -51,7 +51,7 @@ namespace MVCProjeKampi.Controllers
         public ActionResult WriterLogin(Writer writer)
         {
             var response = Request["g-recaptcha-response"];
-            string secretKey = "6LeoBJ8cAAAAAGwQ87ftch_1kH3TdiwZXrBjRNWO";
+            string secretKey = "6Lfj_KMcAAAAABPU-LMNJPpBnVfO5kAd-hj_SrB3";
             var client = new WebClient();
             var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response));
             var obj = JObject.Parse(result);
@@ -60,7 +60,7 @@ namespace MVCProjeKampi.Controllers
 
 
             var writerResult = writerManager.Login(writer);
-            if (writerResult != null/*&& status*/)
+            if (writerResult != null&& status)
             {
                 FormsAuthentication.SetAuthCookie(writerResult.WriterName + writer.WriterSurName, false);
                 Session["WriterMail"] = writerResult.WriterMail;
