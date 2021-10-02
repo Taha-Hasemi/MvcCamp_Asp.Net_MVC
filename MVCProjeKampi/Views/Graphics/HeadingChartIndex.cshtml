@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "CategoryChartIndex";
+    ViewBag.Title = "HeadingChartIndex";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -17,7 +17,7 @@
                 type: "POST",
                 dataType: "json",
                 contentType: "application/json",
-                url: '@Url.Action("CategoryChart", "Graphics")',
+                url: '@Url.Action("HeadingChart", "Graphics")',
                 success: function (result) {
                     google.charts.load('current', {
                         'packages': ['corechart']
@@ -41,7 +41,7 @@
             data.addRows(dataArray);
 
             var columnChartOptions = {
-                title: "Category ",
+                title: "Heading ",
                 width: 1000,
                 height: 800,
                 bar: { groupWidth: "20%" },
@@ -58,4 +58,5 @@
     <div id="Piechart_div"></div>
 </body>
 </html>
+
 

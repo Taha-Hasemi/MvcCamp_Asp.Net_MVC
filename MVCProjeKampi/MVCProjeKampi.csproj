@@ -163,6 +163,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryChart.cs" />
+    <Compile Include="Models\HeadingChart.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role\AdminRoleProvider.cs" />
@@ -2817,6 +2819,7 @@
     <Content Include="Views\SkillsProfile\AddSkill.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\WriterContent\ContentByHeading.cshtml" />
+    <Content Include="Views\Graphics\HeadingChartIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
